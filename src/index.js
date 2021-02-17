@@ -2,14 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import CounterContext from './context/context'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CounterContext.Provider value={10} >
-      <App />
-    </CounterContext.Provider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
