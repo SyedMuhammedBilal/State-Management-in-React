@@ -1,15 +1,16 @@
 import React, { createContext } from 'react'
 import Parent from './components/Parent'
 
-export const User = createContext()
+export const User = createContext() // 01 Class
+export const UserName = createContext() // 02 Class
 
 function App() {
 
   return (
-    <User.Provider value={'10 users active'}>
-      <div>
+    <User.Provider value={'10 users active'}> {/* 01 Class */}
+      <UserName.Provider value={'John'}> {/* 02 Class */}
         <Parent />
-      </div>
+      </UserName.Provider>
     </User.Provider>
   );
 }
