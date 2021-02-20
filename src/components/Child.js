@@ -1,19 +1,16 @@
-import React, {useContext}  from 'react'
-import counter from '../context/context'
+import React from 'react';
+import { User } from '../App'
 
 const Child = () => {
-    let context = useContext(counter);
-
-    function onIncrement() {
-        context[1](++context[0])
-    };
-
     return (
-        <div>
-            <h1>Hello my name is {context}</h1>
-            <button onClick={onIncrement}>Add</button>
-        </div>
+        <User.Consumer>
+            {(user) => {
+                return (
+                    <h1>current activity: {user}</h1>
+                )
+            }}
+        </User.Consumer>
     )
-}
+};
 
 export default Child;

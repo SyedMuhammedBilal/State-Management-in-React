@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { createContext } from 'react'
 import Parent from './components/Parent'
-import CounterContext from './context/context'
+
+export const User = createContext()
 
 function App() {
-  const Value = useState(0);
 
   return (
-    <CounterContext.Provider value={Value} >
+    <User.Provider value={'10 users active'}>
       <div>
         <Parent />
       </div>
-    </CounterContext.Provider>
+    </User.Provider>
   );
 }
 
